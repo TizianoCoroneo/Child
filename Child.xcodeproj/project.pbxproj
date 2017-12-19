@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"Child::ChildPackageTests::ProductTarget" /* ChildPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_66 /* Build configuration list for PBXAggregateTarget "ChildPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_69 /* PBXTargetDependency */,
+			);
+			name = ChildPackageTests;
+			productName = ChildPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_32 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_38 /* ChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ChildTests.swift */; };
+		OBJ_40 /* ChildBrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Child::ChildBrain::Product" /* ChildBrain.framework */; };
+		OBJ_49 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* main.swift */; };
+		OBJ_51 /* ChildBrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Child::ChildBrain::Product" /* ChildBrain.framework */; };
+		OBJ_57 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Arguments.swift */; };
+		OBJ_58 /* Indentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Indentation.swift */; };
+		OBJ_59 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Meta.swift */; };
+		OBJ_60 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Parser.swift */; };
+		OBJ_61 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Runner.swift */; };
+		OBJ_62 /* Value+Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Value+Code.swift */; };
+		OBJ_63 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Value.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35E388B61FE9621C0087B8DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Child::ChildBrain";
+			remoteInfo = ChildBrain;
+		};
+		35E388B71FE9621C0087B8DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Child::Child";
+			remoteInfo = Child;
+		};
+		35E388B81FE9621C0087B8DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Child::ChildBrain";
+			remoteInfo = ChildBrain;
+		};
+		35E388B91FE9621D0087B8DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Child::ChildTests";
+			remoteInfo = ChildTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"Child::Child::Product" /* Child */ = {isa = PBXFileReference; lastKnownFileType = text; path = Child; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Child::ChildBrain::Product" /* ChildBrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChildBrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Child::ChildTests::Product" /* ChildTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChildTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_11 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Indentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indentation.swift; sourceTree = "<group>"; };
+		OBJ_13 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Value+Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Value+Code.swift"; sourceTree = "<group>"; };
+		OBJ_17 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		OBJ_19 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_22 /* ChildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTests.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_8 /* ChildConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ChildConfig.xcconfig; path = Sources/Child/ChildConfig.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_40 /* ChildBrain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_51 /* ChildBrain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* ChildBrain */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* Arguments.swift */,
+				OBJ_12 /* Indentation.swift */,
+				OBJ_13 /* Meta.swift */,
+				OBJ_14 /* Parser.swift */,
+				OBJ_15 /* Runner.swift */,
+				OBJ_16 /* Value+Code.swift */,
+				OBJ_17 /* Value.swift */,
+			);
+			name = ChildBrain;
+			path = Sources/ChildBrain;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* main.swift */,
+			);
+			name = Child;
+			path = Sources/Child;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_20 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* ChildTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_21 /* ChildTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* ChildTests.swift */,
+			);
+			name = ChildTests;
+			path = Tests/ChildTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Child::ChildTests::Product" /* ChildTests.xctest */,
+				"Child::Child::Product" /* Child */,
+				"Child::ChildBrain::Product" /* ChildBrain.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Configs */,
+				OBJ_9 /* Sources */,
+				OBJ_20 /* Tests */,
+				OBJ_23 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* ChildConfig.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		OBJ_9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* ChildBrain */,
+				OBJ_18 /* Child */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Child::Child" /* Child */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_45 /* Build configuration list for PBXNativeTarget "Child" */;
+			buildPhases = (
+				OBJ_48 /* Sources */,
+				OBJ_50 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_52 /* PBXTargetDependency */,
+			);
+			name = Child;
+			productName = Child;
+			productReference = "Child::Child::Product" /* Child */;
+			productType = "com.apple.product-type.tool";
+		};
+		"Child::ChildBrain" /* ChildBrain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_53 /* Build configuration list for PBXNativeTarget "ChildBrain" */;
+			buildPhases = (
+				OBJ_56 /* Sources */,
+				OBJ_64 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChildBrain;
+			productName = ChildBrain;
+			productReference = "Child::ChildBrain::Product" /* ChildBrain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Child::ChildTests" /* ChildTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_34 /* Build configuration list for PBXNativeTarget "ChildTests" */;
+			buildPhases = (
+				OBJ_37 /* Sources */,
+				OBJ_39 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_41 /* PBXTargetDependency */,
+				OBJ_43 /* PBXTargetDependency */,
+			);
+			name = ChildTests;
+			productName = ChildTests;
+			productReference = "Child::ChildTests::Product" /* ChildTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Child::SwiftPMPackageDescription" /* ChildPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_28 /* Build configuration list for PBXNativeTarget "ChildPackageDescription" */;
+			buildPhases = (
+				OBJ_31 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChildPackageDescription;
+			productName = ChildPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Child" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Child::SwiftPMPackageDescription" /* ChildPackageDescription */,
+				"Child::ChildTests" /* ChildTests */,
+				"Child::Child" /* Child */,
+				"Child::ChildBrain" /* ChildBrain */,
+				"Child::ChildPackageTests::ProductTarget" /* ChildPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_32 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_38 /* ChildTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_49 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_57 /* Arguments.swift in Sources */,
+				OBJ_58 /* Indentation.swift in Sources */,
+				OBJ_59 /* Meta.swift in Sources */,
+				OBJ_60 /* Parser.swift in Sources */,
+				OBJ_61 /* Runner.swift in Sources */,
+				OBJ_62 /* Value+Code.swift in Sources */,
+				OBJ_63 /* Value.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Child::Child" /* Child */;
+			targetProxy = 35E388B71FE9621C0087B8DC /* PBXContainerItemProxy */;
+		};
+		OBJ_43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Child::ChildBrain" /* ChildBrain */;
+			targetProxy = 35E388B81FE9621C0087B8DC /* PBXContainerItemProxy */;
+		};
+		OBJ_52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Child::ChildBrain" /* ChildBrain */;
+			targetProxy = 35E388B61FE9621C0087B8DC /* PBXContainerItemProxy */;
+		};
+		OBJ_69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Child::ChildTests" /* ChildTests */;
+			targetProxy = 35E388B91FE9621D0087B8DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Child.xcodeproj/ChildTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = ChildTests;
+			};
+			name = Debug;
+		};
+		OBJ_36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Child.xcodeproj/ChildTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = ChildTests;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Child.xcodeproj/Child_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Child;
+			};
+			name = Debug;
+		};
+		OBJ_47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Child.xcodeproj/Child_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Child;
+			};
+			name = Release;
+		};
+		OBJ_54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Child.xcodeproj/ChildBrain_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ChildBrain;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = ChildBrain;
+			};
+			name = Debug;
+		};
+		OBJ_55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Child.xcodeproj/ChildBrain_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ChildBrain;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = ChildBrain;
+			};
+			name = Release;
+		};
+		OBJ_67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "Child" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_28 /* Build configuration list for PBXNativeTarget "ChildPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_29 /* Debug */,
+				OBJ_30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_34 /* Build configuration list for PBXNativeTarget "ChildTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_35 /* Debug */,
+				OBJ_36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_45 /* Build configuration list for PBXNativeTarget "Child" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_46 /* Debug */,
+				OBJ_47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_53 /* Build configuration list for PBXNativeTarget "ChildBrain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_54 /* Debug */,
+				OBJ_55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_66 /* Build configuration list for PBXAggregateTarget "ChildPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_67 /* Debug */,
+				OBJ_68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

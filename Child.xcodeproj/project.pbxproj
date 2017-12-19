@@ -36,28 +36,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		35E17DB31FE9392C00E88E68 /* PBXContainerItemProxy */ = {
+		35E17DBF1FE9538200E88E68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Child::ChildBrain";
 			remoteInfo = ChildBrain;
 		};
-		35E17DB41FE9392C00E88E68 /* PBXContainerItemProxy */ = {
+		35E17DC01FE9538200E88E68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Child::Child";
 			remoteInfo = Child;
 		};
-		35E17DB51FE9392C00E88E68 /* PBXContainerItemProxy */ = {
+		35E17DC11FE9538200E88E68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Child::ChildBrain";
 			remoteInfo = ChildBrain;
 		};
-		35E17DB61FE9392D00E88E68 /* PBXContainerItemProxy */ = {
+		35E17DC21FE9538300E88E68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -67,7 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		"Child::Child::Product" /* Child */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Child; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Child::Child::Product" /* Child */ = {isa = PBXFileReference; lastKnownFileType = text; path = Child; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Child::ChildBrain::Product" /* ChildBrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChildBrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Child::ChildTests::Product" /* ChildTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChildTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Indentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indentation.swift; sourceTree = "<group>"; };
@@ -322,22 +322,22 @@
 		OBJ_39 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Child::Child" /* Child */;
-			targetProxy = 35E17DB41FE9392C00E88E68 /* PBXContainerItemProxy */;
+			targetProxy = 35E17DC01FE9538200E88E68 /* PBXContainerItemProxy */;
 		};
 		OBJ_41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Child::ChildBrain" /* ChildBrain */;
-			targetProxy = 35E17DB51FE9392C00E88E68 /* PBXContainerItemProxy */;
+			targetProxy = 35E17DC11FE9538200E88E68 /* PBXContainerItemProxy */;
 		};
 		OBJ_50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Child::ChildBrain" /* ChildBrain */;
-			targetProxy = 35E17DB31FE9392C00E88E68 /* PBXContainerItemProxy */;
+			targetProxy = 35E17DBF1FE9538200E88E68 /* PBXContainerItemProxy */;
 		};
 		OBJ_67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Child::ChildTests" /* ChildTests */;
-			targetProxy = 35E17DB61FE9392D00E88E68 /* PBXContainerItemProxy */;
+			targetProxy = 35E17DC21FE9538300E88E68 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -441,7 +441,6 @@
 		OBJ_44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -461,7 +460,6 @@
 		OBJ_45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",

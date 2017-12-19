@@ -1,4 +1,4 @@
 language: objective-c
 xcode_project: Child.xcodeproj # path to your xcodeproj folder
-xcode_scheme: ChildPackageTests
+xcode_scheme: Child
 

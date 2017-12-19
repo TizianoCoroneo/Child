@@ -4,48 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AlamofirePackageDescription.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>Child-Package.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Child.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>ChildPackageDescription.xcscheme</key>
+		<key>Child.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>ChildPackageTests.xcscheme_^#shared#^_</key>
+		<key>ChildPackageDescription.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>ChildPackageTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
-		</dict>
-	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>Child::Child</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>Child::ChildPackageTests::ProductTarget</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>Child::ChildTests</key>
-		<dict>
-			<key>primary</key>
-			<true/>
 		</dict>
 	</dict>
 </dict>

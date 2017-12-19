@@ -6,7 +6,6 @@ import PackageDescription
 let package = Package(
     name: "Child",
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "4.0.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -16,10 +15,10 @@ let package = Package(
             dependencies: ["ChildBrain"]),
         .target(
             name: "ChildBrain",
-            dependencies: ["Alamofire"]),
+            dependencies: []),
         .testTarget(
             name: "ChildTests",
-            dependencies: ["Child", "Alamofire"]
+            dependencies: ["Child"]
         )
     ]
 )

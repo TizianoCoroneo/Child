@@ -6,15 +6,68 @@
 //
 
 import XCTest
-@testable import Child
 @testable import ChildBrain
 
 class ChildTests: XCTestCase {
     
     var runner: Runner! = Runner()
     
+    var jsonPath: String! = nil
+    
+    let jsonTest = """
+
+{
+    "result": [
+        {
+            "id": 1,
+            "user_id": 2,
+            "date_time": "2017-11-14 16:42:29",
+            "summary": "Test Description",
+            "ratings": {
+                "quality": "5",
+                "communication": "2",
+                "deadline": "3",
+                "professionalism": "4",
+                "terms_of_payment": "5",
+                "project_description": "3"
+            },
+            "user": {
+                "id": 3,
+                "first_name": "test-name",
+                "last_name": "test-last-name",
+                "profile_img": null
+            }
+        }
+    ]
+}
+
+"""
+    
     override func setUp() {
         super.setUp()
+        
+        let manager = FileManager.default
+        
+        let jsonName = "TestJSONModel.json"
+        let jsonFolderPath: URL = URL(string: NSTemporaryDirectory())!
+        
+        jsonPath = jsonFolderPath.appendingPathComponent(jsonName).absoluteString
+        
+        if manager.fileExists(
+            atPath: jsonPath) {
+            guard manager.isWritableFile(atPath: jsonPath) else {
+                fatalError("File at \(jsonPath) is not writable")
+            }
+        }
+        
+        guard manager.createFile(
+            atPath: jsonPath,
+            contents: jsonTest.data(using: .utf8)!,
+            attributes: nil)
+            else {
+                
+                fatalError("Failed creation of file at: \(jsonPath)")
+        }
         
         runner = Runner()
     }
@@ -32,7 +85,7 @@ class ChildTests: XCTestCase {
             try runner.run(
             ["child",
              "-i",
-             "/Users/tizianocoroneo/Downloads/Example jsons/DetailReviewResponse.json"],
+             jsonPath],
             diagnostic: { print($0) }) {
                 let out = XCTAttachment.init(string: $0)
                 out.lifetime = .keepAlways
@@ -52,7 +105,7 @@ class ChildTests: XCTestCase {
             try runner.run(
                 ["child",
                  "-i",
-                 "/Users/tizianocoroneo/Downloads/Example jsons/DetailReviewResponse.json",
+                 jsonPath,
                  "--codable"],
                 diagnostic: { print($0) }) {
                     let out = XCTAttachment.init(string: $0)
@@ -73,7 +126,7 @@ class ChildTests: XCTestCase {
             try runner.run(
                 ["child",
                  "-i",
-                 "/Users/tizianocoroneo/Downloads/Example jsons/DetailReviewResponse.json",
+                 jsonPath,
                  "--extended-codable"],
                 diagnostic: { print($0) }) {
                     let out = XCTAttachment.init(string: $0)
@@ -85,12 +138,4 @@ class ChildTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

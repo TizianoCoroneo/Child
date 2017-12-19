@@ -2,3 +2,5 @@ language: objective-c
 xcode_project: Child.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Child
 
+script:
+ - xcodebuild clean test -sdk macosx10.13 -project Child.xcodeproj -scheme Child CODE_SIGNING_REQUIRED=NO

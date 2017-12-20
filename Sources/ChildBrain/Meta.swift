@@ -8,11 +8,17 @@ public struct Meta {
     let modelType: String
     let codable: Bool
     let extendedCodable: Bool
-    let declareVariableProperties: Bool
+    let declareVariableProperties: DeclareType
     let jsonDictionaryName: String
     let propertyMap: [String: String]
     let arrayObjectMap: [String: String]
     let propertyTypeMap: [String: String]
+    
+    public enum DeclareType: String {
+        case `var` = "var"
+        case `let` = "let"
+        case realm = "@objc dynamic var"
+    }
     
     public struct EnumProperty {
         public let name: String
@@ -79,7 +85,7 @@ public struct Meta {
         modelType: String,
         codable: Bool,
         extendedCodable: Bool,
-        declareVariableProperties: Bool,
+        declareVariableProperties: DeclareType,
         jsonDictionaryName: String,
         propertyMap: [String: String],
         arrayObjectMap: [String: String],
@@ -103,7 +109,7 @@ public struct Meta {
             modelType: "struct",
             codable: false,
             extendedCodable: false,
-            declareVariableProperties: false,
+            declareVariableProperties: .let,
             jsonDictionaryName: "[String: Any]",
             propertyMap: [:],
             arrayObjectMap: [:],
@@ -117,7 +123,7 @@ public struct Meta {
     }
 
     var declareKeyword: String {
-        return declareVariableProperties ? "var" : "let"
+        return declareVariableProperties.rawValue
     }
 }
 

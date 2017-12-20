@@ -229,16 +229,20 @@ class ChildTests: XCTestCase {
             print("\n\n-----\n\n")
             defer { print("\n\n-----\n\n") }
             
+            var out: XCTAttachment? = nil
+            
             try runner.run(
             ["child",
              "-i",
              smallJsonPath],
             diagnostic: { print($0) }) {
-                let out = XCTAttachment.init(string: $0)
-                out.lifetime = .keepAlways
-                out.name = "Basic.txt"
-                self.add(out)
+                out = XCTAttachment.init(string: $0)
+                out?.lifetime = .keepAlways
+                out?.name = "Basic.txt"
+                self.add(out!)
             }
+            
+            XCTAssertNotNil(out)
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -249,17 +253,21 @@ class ChildTests: XCTestCase {
             print("\n\n-----\n\n")
             defer { print("\n\n-----\n\n") }
             
+            var out: XCTAttachment? = nil
+            
             try runner.run(
                 ["child",
                  "-i",
                  smallJsonPath,
                  "--codable"],
                 diagnostic: { print($0) }) {
-                    let out = XCTAttachment.init(string: $0)
-                    out.lifetime = .keepAlways
-                    out.name = "Codable.txt"
-                    self.add(out)
+                    out = XCTAttachment.init(string: $0)
+                    out?.lifetime = .keepAlways
+                    out?.name = "Codable.txt"
+                    self.add(out!)
             }
+            
+            XCTAssertNotNil(out)
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -270,17 +278,21 @@ class ChildTests: XCTestCase {
             print("\n\n-----\n\n")
             defer { print("\n\n-----\n\n") }
             
+            var out: XCTAttachment? = nil
+            
             try runner.run(
                 ["child",
                  "-i",
                  smallJsonPath,
                  "--extended-codable"],
                 diagnostic: { print($0) }) {
-                    let out = XCTAttachment.init(string: $0)
-                    out.lifetime = .keepAlways
-                    out.name = "Codable.txt"
-                    self.add(out)
+                    out = XCTAttachment.init(string: $0)
+                    out?.lifetime = .keepAlways
+                    out?.name = "Codable.txt"
+                    self.add(out!)
             }
+            
+            XCTAssertNotNil(out)
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -291,19 +303,48 @@ class ChildTests: XCTestCase {
             print("\n\n-----\n\n")
             defer { print("\n\n-----\n\n") }
             
+            var out: XCTAttachment? = nil
+            
             try runner.run(
                 ["child",
                  "-i",
                  bigJsonPath,
                  "--extended-codable"],
                 diagnostic: { print($0) }) {
-                    let out = XCTAttachment.init(string: $0)
-                    out.lifetime = .keepAlways
-                    out.name = "Big JSON.txt"
-                    self.add(out)
+                    out = XCTAttachment.init(string: $0)
+                    out?.lifetime = .keepAlways
+                    out?.name = "Big JSON.txt"
+                    self.add(out!)
             }
+            
+            XCTAssertNotNil(out)
         } catch {
             XCTFail(error.localizedDescription)
         }
     }
+//
+//    func testRealmJson() {
+//        do {
+//            print("\n\n-----\n\n")
+//            defer { print("\n\n-----\n\n") }
+//
+//            var out: XCTAttachment? = nil
+//
+//            try runner.run(
+//                ["child",
+//                 "-i",
+//                 bigJsonPath,
+//                 "--realm"],
+//                diagnostic: { print($0) }) {
+//                    out = XCTAttachment.init(string: $0)
+//                    out?.lifetime = .keepAlways
+//                    out?.name = "Realm JSON.txt"
+//                    self.add(out!)
+//            }
+//
+//            XCTAssertNotNil(out)
+//        } catch {
+//            XCTFail(error.localizedDescription)
+//        }
+//    }
 }

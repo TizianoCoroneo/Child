@@ -20,12 +20,33 @@ public class Runner {
         let helpOption = Arguments.Option.Mixed(shortKey: "h", longKey: "help")
         
         func printVersion() {
-            dia?("Version 0.29.0")
-            dia?("Created by nixzhu with love.")
+            dia?("Version 0.1.0")
+            dia?("Created by Tiziano Coroneo")
+            dia?("Based on Baby - Created by nixzhu with love.")
         }
         
         func printUsage() {
-            dia?("Usage: $ baby -i JSONFilePath")
+            dia?("""
+Usage:
+    $ child -i JSONFilePath
+    Generates standard model files, providing a value initializer and a dictionary initializer.
+
+    $ child -i JSONFilePath --codable
+    Generates Swift 4 Codable's model files, providing a value initializer and a data (utf8) initializer.
+
+    $ child -i JSONFilePath --extended-codable
+    Generates Swift 4 Codable's model files, providing a value initializer, a data (utf8) initializer and also the old dictionary initializer.
+
+    $ child -i JSONFilePath --var
+    Generates model files with all properties as `var`s instead of `let`s.
+
+    $ child -i JSONFilePath --realm
+    Generates model files with all properties as "@objc dynamic var" instead of `let`s.
+
+    $ child -i JSONFilePath --model-name Name
+    Change the generated model file name with "Name". It changes also the class name.
+
+""")
         }
         
         func printHelp() {
@@ -36,6 +57,7 @@ public class Runner {
             dia?("--codable")
             dia?("--extended-codable")
             dia?("--var")
+            dia?("--realm")
             dia?("--json-dictionary-name JSONDictionaryName")
             dia?("--property-map \"foo: bar, not_used: _\"")
             dia?("--array-object-map \"skills: Skill, itemlist: Item\"")
@@ -46,7 +68,7 @@ public class Runner {
         }
         
         if arguments.containsOption(helpOption) {
-            dia?("Create models from a JSON file, even a Baby can do it.")
+            dia?("Create models from a JSON file, even a Child can do it.")
             printHelp()
             printVersion()
             return
@@ -117,12 +139,35 @@ public class Runner {
             let codableOption = Arguments.Option.Long(key: "codable")
             let extendedCodableOption = Arguments.Option.Long(key: "extended-codable")
             let varOption = Arguments.Option.Long(key: "var")
+            let realmOption = Arguments.Option.Long(key: "realm")
             let jsonDictionaryNameOption = Arguments.Option.Long(key: "json-dictionary-name")
             let isPublic = arguments.containsOption(publicOption)
-            let modelType = arguments.valueOfOption(modelTypeOption) ?? "struct"
+            var modelType = arguments.valueOfOption(modelTypeOption) ?? "struct"
+            
             let codable = arguments.containsOption(codableOption)
             let extendedCodable = arguments.containsOption(extendedCodableOption)
-            let declareVariableProperties = arguments.containsOption(varOption)
+            
+            var declareVariableProperties = Meta.DeclareType.let
+            let shouldBeVars = arguments.containsOption(varOption)
+            let shouldBeRealms = arguments.containsOption(realmOption)
+            
+            guard !(shouldBeVars && shouldBeRealms) else {
+                dia?("Can't use both --var and --realm options. Please choose one of them only.")
+                return
+            }
+            
+            if shouldBeVars {
+                declareVariableProperties = Meta.DeclareType.var
+            } else if shouldBeRealms {
+                declareVariableProperties = .realm
+                modelType = "class"
+            }
+            
+            guard !shouldBeRealms else {
+                dia?("Sorry, realm generation not working yet.")
+                return
+            }
+            
             let jsonDictionaryName = arguments.valueOfOption(jsonDictionaryNameOption) ?? "[String: Any]"
             let propertyTypeMapOption = Arguments.Option.Long(key: "property-type-map")
             let propertyTypeMapString = arguments.valueOfOption(propertyTypeMapOption) ?? ""

@@ -45,7 +45,6 @@ Usage:
 
     $ child -i JSONFilePath --model-name Name
     Change the generated model file name with "Name". It changes also the class name.
-
 """)
         }
         

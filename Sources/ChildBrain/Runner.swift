@@ -45,6 +45,12 @@ Usage:
 
     $ child -i JSONFilePath --model-name Name
     Change the generated model file name with "Name". It changes also the class name.
+
+    $ child -i JSONFilePath --tcjson
+    Generates Swift 4 Codable's model files that inherits from my TCJSONCodable utility protocol. These model are meant to be used with another of my GitHub repos: [TCJSON](https://github.com/TizianoCoroneo/TCJSON).
+
+    $ child -i JSONFilePath --tcjson --extended-codable
+    Generates normal TCJSON model files and adds the legacy dictionary initializer.
 """)
         }
         
@@ -55,6 +61,7 @@ Usage:
             dia?("--model-name ModelName")
             dia?("--codable")
             dia?("--extended-codable")
+            dia?("--tcjson")
             dia?("--var")
             dia?("--realm")
             dia?("--json-dictionary-name JSONDictionaryName")
@@ -137,6 +144,7 @@ Usage:
             let modelTypeOption = Arguments.Option.Long(key: "model-type")
             let codableOption = Arguments.Option.Long(key: "codable")
             let extendedCodableOption = Arguments.Option.Long(key: "extended-codable")
+            let tcjsonOption = Arguments.Option.Long(key: "tcjson")
             let varOption = Arguments.Option.Long(key: "var")
             let realmOption = Arguments.Option.Long(key: "realm")
             let jsonDictionaryNameOption = Arguments.Option.Long(key: "json-dictionary-name")
@@ -145,6 +153,22 @@ Usage:
             
             let codable = arguments.containsOption(codableOption)
             let extendedCodable = arguments.containsOption(extendedCodableOption)
+            let tcjson = arguments.containsOption(tcjsonOption)
+            
+            guard !(codable && extendedCodable) else {
+                dia?("Can't use both --codable and --extended-codable options. Please choose one of them only.")
+                return
+            }
+
+            guard !(codable && tcjson) else {
+                dia?("Can't use both --codable and --tcjson options. Please choose one of them only.")
+                return
+            }
+            
+            var codableType: Meta.CodableType = .standard
+            
+            if codable || extendedCodable { codableType = .codable }
+            if tcjson { codableType = .tcjson }
             
             var declareVariableProperties = Meta.DeclareType.let
             let shouldBeVars = arguments.containsOption(varOption)
@@ -177,7 +201,7 @@ Usage:
             let meta = Meta(
                 isPublic: isPublic,
                 modelType: modelType,
-                codable: codable,
+                codable: codableType,
                 extendedCodable: extendedCodable,
                 declareVariableProperties: declareVariableProperties,
                 jsonDictionaryName: jsonDictionaryName,

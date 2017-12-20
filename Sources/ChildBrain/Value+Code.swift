@@ -305,7 +305,7 @@ extension Value {
         case let .object(name, dictionary, keys):
             var lines: [String] = []
             if meta.codable || meta.extendedCodable {
-                lines.append("\(indent)\(meta.publicCode)\(meta.modelType) \(name.type(meta: meta)): Codable {")
+                lines.append("\(indent)\(meta.publicCode)\(meta.modelType) \(name.type(meta: meta)): \(meta.codableType.rawValue) {")
             } else {
                 lines.append("\(indent)\(meta.publicCode)\(meta.modelType) \(name.type(meta: meta)) {")
             }
@@ -314,8 +314,9 @@ extension Value {
                 lines.append(value.swiftCode(indentation: indentation.deeper, meta: meta))
                 let propertyType = value.propertyType(key: key, meta: meta)
                 if case .enum(_, _, let rawType, let rawValues) = propertyType {
+                   
                     if meta.codable || meta.extendedCodable {
-                        lines.append("\(indent1)\(meta.publicCode)enum \(propertyType.name): \(propertyType.enumRawType), Codable {")
+                        lines.append("\(indent1)\(meta.publicCode)enum \(propertyType.name): \(propertyType.enumRawType), \(meta.codableType.rawValue) {")
                     } else {
                         lines.append("\(indent1)\(meta.publicCode)enum \(propertyType.name): \(propertyType.enumRawType) {")
                     }

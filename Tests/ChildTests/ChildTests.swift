@@ -229,20 +229,26 @@ class ChildTests: XCTestCase {
             print("\n\n-----\n\n")
             defer { print("\n\n-----\n\n") }
             
-            var out: XCTAttachment? = nil
+            var outputString: String? = nil
             
             try runner.run(
             ["child",
              "-i",
              smallJsonPath],
-            diagnostic: { print($0) }) {
-                out = XCTAttachment.init(string: $0)
-                out?.lifetime = .keepAlways
-                out?.name = "Basic.txt"
-                self.add(out!)
-            }
+            diagnostic: { print($0) })
+            { outputString = $0 }
             
-            XCTAssertNotNil(out)
+            XCTAssertNotNil(outputString)
+            
+            guard let string = outputString else { return }
+            
+            XCTAssert(string
+                .contains("init?(json: [String: Any]) {"))
+            
+            let out = XCTAttachment.init(string: string)
+            out.lifetime = .keepAlways
+            out.name = "Basic.txt"
+            self.add(out)
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -253,21 +259,27 @@ class ChildTests: XCTestCase {
             print("\n\n-----\n\n")
             defer { print("\n\n-----\n\n") }
             
-            var out: XCTAttachment? = nil
+            var outputString: String? = nil
             
             try runner.run(
                 ["child",
                  "-i",
                  smallJsonPath,
                  "--codable"],
-                diagnostic: { print($0) }) {
-                    out = XCTAttachment.init(string: $0)
-                    out?.lifetime = .keepAlways
-                    out?.name = "Codable.txt"
-                    self.add(out!)
-            }
+                diagnostic: { print($0) })
+            { outputString = $0 }
             
-            XCTAssertNotNil(out)
+            XCTAssertNotNil(outputString)
+            
+            guard let string = outputString else { return }
+            
+            XCTAssert(string
+                .contains(": Codable"))
+            
+            let out = XCTAttachment.init(string: string)
+            out.lifetime = .keepAlways
+            out.name = "Codable.txt"
+            self.add(out)
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -278,21 +290,29 @@ class ChildTests: XCTestCase {
             print("\n\n-----\n\n")
             defer { print("\n\n-----\n\n") }
             
-            var out: XCTAttachment? = nil
+            var outputString: String? = nil
             
             try runner.run(
                 ["child",
                  "-i",
                  smallJsonPath,
                  "--extended-codable"],
-                diagnostic: { print($0) }) {
-                    out = XCTAttachment.init(string: $0)
-                    out?.lifetime = .keepAlways
-                    out?.name = "Codable.txt"
-                    self.add(out!)
-            }
+                diagnostic: { print($0) })
+            { outputString = $0 }
             
-            XCTAssertNotNil(out)
+            XCTAssertNotNil(outputString)
+            
+            guard let string = outputString else { return }
+            
+            XCTAssert(string
+                .contains("init?(json: [String: Any]) {"))
+            XCTAssert(string
+                .contains(": Codable"))
+            
+            let out = XCTAttachment.init(string: string)
+            out.lifetime = .keepAlways
+            out.name = "ExtendedCodable.txt"
+            self.add(out)
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -303,26 +323,99 @@ class ChildTests: XCTestCase {
             print("\n\n-----\n\n")
             defer { print("\n\n-----\n\n") }
             
-            var out: XCTAttachment? = nil
-            
+            var outputString: String? = nil
+    
             try runner.run(
                 ["child",
                  "-i",
                  bigJsonPath,
                  "--extended-codable"],
-                diagnostic: { print($0) }) {
-                    out = XCTAttachment.init(string: $0)
-                    out?.lifetime = .keepAlways
-                    out?.name = "Big JSON.txt"
-                    self.add(out!)
-            }
+                diagnostic: { print($0) })
+            { outputString = $0 }
             
-            XCTAssertNotNil(out)
+            XCTAssertNotNil(outputString)
+            
+            guard let string = outputString else { return }
+            
+            XCTAssert(string
+                .contains("init?(json: [String: Any]) {"))
+            XCTAssert(string
+                .contains(": Codable"))
+            
+            let out = XCTAttachment.init(string: string)
+            out.lifetime = .keepAlways
+            out.name = "Big JSON.txt"
+            self.add(out)
         } catch {
             XCTFail(error.localizedDescription)
         }
     }
-//
+    
+    func testTCJSONCodable() {
+        do {
+            print("\n\n-----\n\n")
+            defer { print("\n\n-----\n\n") }
+            
+            var outputString: String? = nil
+            
+            try runner.run(
+                ["child",
+                 "-i",
+                 bigJsonPath,
+                 "--tcjson"],
+                diagnostic: { print($0) })
+            { outputString = $0 }
+            
+            XCTAssertNotNil(outputString)
+            
+            guard let string = outputString else { return }
+            
+            XCTAssert(string
+                .contains(": TCJSONCodable"))
+            
+            let out = XCTAttachment.init(string: string)
+            out.lifetime = .keepAlways
+            out.name = "TCJSON.txt"
+            self.add(out)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    func testExtendedTCJSONCodable() {
+        do {
+            print("\n\n-----\n\n")
+            defer { print("\n\n-----\n\n") }
+            
+            var outputString: String? = nil
+            
+            try runner.run(
+                ["child",
+                 "-i",
+                 bigJsonPath,
+                 "--tcjson",
+                 "--extended-codable"],
+                diagnostic: { print($0) })
+            { outputString = $0 }
+            
+            XCTAssertNotNil(outputString)
+            
+            guard let string = outputString else { return }
+            
+            XCTAssert(string
+                .contains("init?(json: [String: Any]) {"))
+            XCTAssert(string
+                .contains(": TCJSONCodable"))
+            
+            let out = XCTAttachment.init(string: string)
+            out.lifetime = .keepAlways
+            out.name = "Extended TCJSON.txt"
+            self.add(out)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
 //    func testRealmJson() {
 //        do {
 //            print("\n\n-----\n\n")

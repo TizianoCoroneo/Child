@@ -69,9 +69,9 @@
 /* Begin PBXFileReference section */
 		359F1C211FEA7D8900F774E2 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		359F1C221FEA7EBE00F774E2 /* applyOnFolder.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = applyOnFolder.sh; sourceTree = "<group>"; };
-		"Child::Child::Product" /* Child */ = {isa = PBXFileReference; lastKnownFileType = text; path = Child; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Child::Child::Product" /* Child */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Child; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Child::ChildBrain::Product" /* ChildBrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChildBrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Child::ChildTests::Product" /* ChildTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChildTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Child::ChildTests::Product" /* ChildTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ChildTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_11 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Indentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indentation.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
@@ -82,7 +82,6 @@
 		OBJ_19 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_22 /* ChildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_8 /* ChildConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ChildConfig.xcconfig; path = Sources/Child/ChildConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,19 +168,10 @@
 				359F1C221FEA7EBE00F774E2 /* applyOnFolder.sh */,
 				359F1C211FEA7D8900F774E2 /* install.sh */,
 				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Configs */,
 				OBJ_9 /* Sources */,
 				OBJ_20 /* Tests */,
 				OBJ_23 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		OBJ_7 /* Configs */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_8 /* ChildConfig.xcconfig */,
-			);
-			name = Configs;
 			sourceTree = "<group>";
 		};
 		OBJ_9 /* Sources */ = {
@@ -397,7 +387,6 @@
 		};
 		OBJ_35 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -416,7 +405,6 @@
 		};
 		OBJ_36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -455,7 +443,6 @@
 		};
 		OBJ_46 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,7 +462,6 @@
 		};
 		OBJ_47 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,7 +481,6 @@
 		};
 		OBJ_54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -518,7 +503,6 @@
 		};
 		OBJ_55 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* ChildConfig.xcconfig */;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (

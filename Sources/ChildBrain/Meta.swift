@@ -6,7 +6,7 @@
 public struct Meta {
     let isPublic: Bool
     let modelType: String
-    let codable: Bool
+    let codableType: CodableType
     let extendedCodable: Bool
     let declareVariableProperties: DeclareType
     let jsonDictionaryName: String
@@ -14,10 +14,20 @@ public struct Meta {
     let arrayObjectMap: [String: String]
     let propertyTypeMap: [String: String]
     
+    var codable: Bool {
+        return self.codableType != .standard
+    }
+    
     public enum DeclareType: String {
         case `var` = "var"
         case `let` = "let"
         case realm = "@objc dynamic var"
+    }
+    
+    public enum CodableType: String {
+        case standard = ""
+        case codable = "Codable"
+        case tcjson = "TCJSONCodable"
     }
     
     public struct EnumProperty {
@@ -83,7 +93,7 @@ public struct Meta {
     public init(
         isPublic: Bool,
         modelType: String,
-        codable: Bool,
+        codable: CodableType,
         extendedCodable: Bool,
         declareVariableProperties: DeclareType,
         jsonDictionaryName: String,
@@ -93,7 +103,7 @@ public struct Meta {
         enumProperties: [EnumProperty]) {
         self.isPublic = isPublic
         self.modelType = modelType
-        self.codable = codable
+        self.codableType = codable
         self.extendedCodable = extendedCodable
         self.declareVariableProperties = declareVariableProperties
         self.jsonDictionaryName = jsonDictionaryName
@@ -107,7 +117,7 @@ public struct Meta {
         return Meta(
             isPublic: false,
             modelType: "struct",
-            codable: false,
+            codable: .codable,
             extendedCodable: false,
             declareVariableProperties: .let,
             jsonDictionaryName: "[String: Any]",

@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		358C94761FEDCB1600F84D84 /* TestJSONS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C94751FEDCB1600F84D84 /* TestJSONS.swift */; };
 		OBJ_32 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_38 /* ChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ChildTests.swift */; };
 		OBJ_40 /* ChildBrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Child::ChildBrain::Product" /* ChildBrain.framework */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		358C94751FEDCB1600F84D84 /* TestJSONS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJSONS.swift; sourceTree = "<group>"; };
 		359F1C211FEA7D8900F774E2 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		359F1C221FEA7EBE00F774E2 /* applyOnFolder.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = applyOnFolder.sh; sourceTree = "<group>"; };
 		"Child::Child::Product" /* Child */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Child; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_22 /* ChildTests.swift */,
+				358C94751FEDCB1600F84D84 /* TestJSONS.swift */,
 			);
 			name = ChildTests;
 			path = Tests/ChildTests;
@@ -294,6 +297,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_38 /* ChildTests.swift in Sources */,
+				358C94761FEDCB1600F84D84 /* TestJSONS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -305,7 +305,7 @@ extension Value {
         case let .object(name, dictionary, keys):
             var lines: [String] = []
             if meta.codable || meta.extendedCodable {
-                lines.append("\(indent)\(meta.publicCode)\(meta.modelType) \(name.type(meta: meta)): \(meta.codableType.rawValue) {")
+                lines.append("\(indent)\(meta.final)\(meta.publicCode)\(meta.modelType) \(name.type(meta: meta)): \(meta.codableType.rawValue) {")
             } else {
                 lines.append("\(indent)\(meta.publicCode)\(meta.modelType) \(name.type(meta: meta)) {")
             }
@@ -389,6 +389,8 @@ extension Value {
             if meta.extendedCodable {
                 lines.append(self.initializerCode(indentation: indentation.deeper, meta: meta))
                 lines.append(self.failableInitializerCode(indentation: indentation.deeper, meta: meta))
+            } else if meta.modelType == "class" {
+                lines.append(self.initializerCode(indentation: indentation.deeper, meta: meta))
             }
             lines.append("\(indent)}")
             return lines.filter({ !$0.isEmpty }).joined(separator: "\n")

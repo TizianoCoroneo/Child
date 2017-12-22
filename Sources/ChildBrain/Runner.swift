@@ -210,7 +210,11 @@ Usage:
                 propertyTypeMap: propertyTypeMap,
                 enumProperties: enumProperties
             )
-            completion?(upgradedValue.swiftCode(meta: meta))
+            
+            let result = upgradedValue.swiftCode(meta: meta)
+            let importStatement = meta.codableType == .tcjson ? "import TCJSON\n\n" : ""
+
+            completion?(importStatement + result)
         } else {
             dia?("Invalid JSON!")
         }

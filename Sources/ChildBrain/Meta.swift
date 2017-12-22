@@ -131,6 +131,10 @@ public struct Meta {
     var publicCode: String {
         return isPublic ? "public " : ""
     }
+    
+    var final: String {
+        return (codableType == .tcjson && modelType == "class") ? "final " : ""
+    }
 
     var declareKeyword: String {
         return declareVariableProperties.rawValue

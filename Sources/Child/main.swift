@@ -3,12 +3,11 @@
 import Foundation
 import ChildBrain
 
-let runner = Runner()
+let runner = Runner { print($0) }
 
 do {
-    try runner.run(
+    try runner.runCommandLine(
         CommandLine.arguments,
-        diagnostic: { print($0) },
         completion: { print($0) })
 } catch {
     print("Error! \(error)")

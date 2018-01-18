@@ -22,6 +22,18 @@
 
 /* Begin PBXBuildFile section */
 		358C94761FEDCB1600F84D84 /* TestJSONS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C94751FEDCB1600F84D84 /* TestJSONS.swift */; };
+		35CBB46720115E86005BC355 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CBB46620115E86005BC355 /* Cocoa.framework */; };
+		35CBB46A20115E86005BC355 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBB46920115E86005BC355 /* SourceEditorExtension.swift */; };
+		35CBB46C20115E86005BC355 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBB46B20115E86005BC355 /* SourceEditorCommand.swift */; };
+		35CBB47220115E97005BC355 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Arguments.swift */; };
+		35CBB47320115E97005BC355 /* Indentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Indentation.swift */; };
+		35CBB47420115E97005BC355 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Meta.swift */; };
+		35CBB47520115E97005BC355 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Parser.swift */; };
+		35CBB47620115E97005BC355 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Runner.swift */; };
+		35CBB47720115E97005BC355 /* Value+Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Value+Code.swift */; };
+		35CBB47820115E97005BC355 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Value.swift */; };
+		35CBB47A20115EC6005BC355 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBB47920115EC6005BC355 /* Logger.swift */; };
+		35CBB47B20115EC6005BC355 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBB47920115EC6005BC355 /* Logger.swift */; };
 		OBJ_32 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_38 /* ChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ChildTests.swift */; };
 		OBJ_40 /* ChildBrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Child::ChildBrain::Product" /* ChildBrain.framework */; };
@@ -71,6 +83,13 @@
 		358C94751FEDCB1600F84D84 /* TestJSONS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJSONS.swift; sourceTree = "<group>"; };
 		359F1C211FEA7D8900F774E2 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		359F1C221FEA7EBE00F774E2 /* applyOnFolder.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = applyOnFolder.sh; sourceTree = "<group>"; };
+		35CBB46420115E86005BC355 /* LazyChild.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LazyChild.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		35CBB46620115E86005BC355 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		35CBB46920115E86005BC355 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		35CBB46B20115E86005BC355 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		35CBB46D20115E86005BC355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35CBB46E20115E86005BC355 /* LazyChild.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyChild.entitlements; sourceTree = "<group>"; };
+		35CBB47920115EC6005BC355 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		"Child::Child::Product" /* Child */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Child; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Child::ChildBrain::Product" /* ChildBrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChildBrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Child::ChildTests::Product" /* ChildTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ChildTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +106,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		35CBB46120115E86005BC355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35CBB46720115E86005BC355 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -113,6 +140,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35CBB46520115E86005BC355 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35CBB46620115E86005BC355 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35CBB46820115E86005BC355 /* LazyChild */ = {
+			isa = PBXGroup;
+			children = (
+				35CBB46920115E86005BC355 /* SourceEditorExtension.swift */,
+				35CBB46B20115E86005BC355 /* SourceEditorCommand.swift */,
+				35CBB46D20115E86005BC355 /* Info.plist */,
+				35CBB46E20115E86005BC355 /* LazyChild.entitlements */,
+			);
+			path = LazyChild;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* ChildBrain */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +169,7 @@
 				OBJ_15 /* Runner.swift */,
 				OBJ_16 /* Value+Code.swift */,
 				OBJ_17 /* Value.swift */,
+				35CBB47920115EC6005BC355 /* Logger.swift */,
 			);
 			name = ChildBrain;
 			path = Sources/ChildBrain;
@@ -161,6 +208,7 @@
 				"Child::ChildTests::Product" /* ChildTests.xctest */,
 				"Child::Child::Product" /* Child */,
 				"Child::ChildBrain::Product" /* ChildBrain.framework */,
+				35CBB46420115E86005BC355 /* LazyChild.appex */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -173,6 +221,8 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_9 /* Sources */,
 				OBJ_20 /* Tests */,
+				35CBB46820115E86005BC355 /* LazyChild */,
+				35CBB46520115E86005BC355 /* Frameworks */,
 				OBJ_23 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -189,6 +239,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		35CBB46320115E86005BC355 /* LazyChild */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35CBB47120115E86005BC355 /* Build configuration list for PBXNativeTarget "LazyChild" */;
+			buildPhases = (
+				35CBB46020115E86005BC355 /* Sources */,
+				35CBB46120115E86005BC355 /* Frameworks */,
+				35CBB46220115E86005BC355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyChild;
+			productName = LazyChild;
+			productReference = 35CBB46420115E86005BC355 /* LazyChild.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 		"Child::Child" /* Child */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_45 /* Build configuration list for PBXNativeTarget "Child" */;
@@ -260,7 +327,15 @@
 		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					35CBB46320115E86005BC355 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 23YF8RW87L;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Child" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -279,11 +354,39 @@
 				"Child::Child" /* Child */,
 				"Child::ChildBrain" /* ChildBrain */,
 				"Child::ChildPackageTests::ProductTarget" /* ChildPackageTests */,
+				35CBB46320115E86005BC355 /* LazyChild */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		35CBB46220115E86005BC355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		35CBB46020115E86005BC355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35CBB47220115E97005BC355 /* Arguments.swift in Sources */,
+				35CBB47320115E97005BC355 /* Indentation.swift in Sources */,
+				35CBB47520115E97005BC355 /* Parser.swift in Sources */,
+				35CBB46A20115E86005BC355 /* SourceEditorExtension.swift in Sources */,
+				35CBB47420115E97005BC355 /* Meta.swift in Sources */,
+				35CBB47B20115EC6005BC355 /* Logger.swift in Sources */,
+				35CBB47820115E97005BC355 /* Value.swift in Sources */,
+				35CBB46C20115E86005BC355 /* SourceEditorCommand.swift in Sources */,
+				35CBB47720115E97005BC355 /* Value+Code.swift in Sources */,
+				35CBB47620115E97005BC355 /* Runner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -320,6 +423,7 @@
 				OBJ_61 /* Runner.swift in Sources */,
 				OBJ_62 /* Value+Code.swift in Sources */,
 				OBJ_63 /* Value.swift in Sources */,
+				35CBB47A20115EC6005BC355 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +453,121 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		35CBB46F20115E86005BC355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = LazyChild/LazyChild.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 23YF8RW87L;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = LazyChild/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tizianocoroneo.LazyChild;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		35CBB47020115E86005BC355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = LazyChild/LazyChild.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 23YF8RW87L;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = LazyChild/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tizianocoroneo.LazyChild;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		OBJ_29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -542,6 +761,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		35CBB47120115E86005BC355 /* Build configuration list for PBXNativeTarget "LazyChild" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35CBB46F20115E86005BC355 /* Debug */,
+				35CBB47020115E86005BC355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "Child" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

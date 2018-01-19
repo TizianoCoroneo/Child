@@ -10,7 +10,7 @@ import XCTest
 
 class ChildTests: XCTestCase {
     
-    var runner: Runner! = Runner()
+    var runner: Runner! = Runner { _ in }
     
     var smallJsonPath: String! = nil
     var bigJsonPath: String! = nil
@@ -39,7 +39,7 @@ class ChildTests: XCTestCase {
             contents: bigJsonTest.data(using: .utf8)!,
             attributes: nil)
         
-        runner = Runner()
+        runner = Runner { _ in }
     }
     
     override func tearDown() {
@@ -170,11 +170,7 @@ class ChildTests: XCTestCase {
         do {
             var outputString: String? = nil
             
-            try runner.run(
-                options,
-                //                diagnostic: { print($0) })
-                diagnostic: nil)
-            { outputString = $0 }
+            try runner.runCommandLine(options) { outputString = $0 }
             
             XCTAssertNotNil(outputString)
             
